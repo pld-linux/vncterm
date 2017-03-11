@@ -1,13 +1,13 @@
 Summary:	LinuxVNC - VNC terminal using LibVNCServer library
 Summary(pl.UTF-8):	LinuxVNC - terminal VNC wykorzystujący bibliotekę LibVNCServer
 Name:		vncterm
-Version:	0.1
-Release:	0.20140910.1
+Version:	0.9.10
+Release:	1
 License:	GPL v2
-Group:		Applications
-%define	gitref	bedac42b4861138526304f913ca42cc9f1b3baef
-Source0:	https://github.com/LibVNC/vncterm/archive/%{gitref}/%{name}-%{gitref}.tar.gz
-# Source0-md5:	0a4cbc01137228b8541769dd6401ce2d
+Group:		Applications/Graphics
+#Source0Download: https://github.com/LibVNC/vncterm/releases
+Source0:	https://github.com/LibVNC/vncterm/archive/%{version}/%{name}-%{version}.tar.gz
+# Source0-md5:	9aec637912e56f8fc03b61bb6398e9a1
 URL:		https://github.com/LibVNC/vncterm/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
@@ -24,7 +24,7 @@ LinuxVNC - VNC terminal using LibVNCServer library.
 LinuxVNC - terminal VNC wykorzystujący bibliotekę LibVNCServer.
 
 %prep
-%setup -q -n vncterm-%{gitref}
+%setup -q
 
 %build
 %{__aclocal}
